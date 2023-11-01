@@ -1,0 +1,84 @@
+---
+title: "dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+```
+
+```{r}
+data("instacart")
+sample_data <- instacart|>
+  sample_n(10000)
+```
+
+```{r}
+product_counts <- instacart |>
+    group_by(product_name) |>
+    summarise(order_count = n()) |>
+    arrange(desc(order_count)) |>
+  head(10)
+```
+
+rmarkdown::render("dashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### order dow vs. order time of the day for reordered
+
+```{r}
+scatter_plot <- plot_ly(data = sample_data, x = ~order_dow, y = ~order_hour_of_day, color = ~as.factor(reordered), type = "box")
+scatter_plot
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Product with their order count
+
+```{r}
+bar_plot <- plot_ly(
+    product_counts,
+    x = ~order_count,
+    y = ~product_name,
+    type = 'bar'
+)
+bar_plot
+
+```
+
+### Scatter Plot with color based on order_hour_of_day
+
+```{r}
+
+line_chart <- sample_data |>
+  mutate(time_of_day = case_when(
+    order_hour_of_day < 12 ~ "Morning",
+    order_hour_of_day < 18 ~ "Afternoon",
+    TRUE ~ "Evening")
+  ) |>
+  group_by(order_dow, time_of_day) |>
+  summarise(mean_days_since_prior = mean(days_since_prior_order, na.rm = TRUE)) |>
+  plot_ly(
+    x = ~order_dow, 
+    y = ~mean_days_since_prior,  
+    color = ~time_of_day, 
+    type = "scatter", 
+    mode = "markers",
+    line = list(shape = "spline")  # Optional: This makes the lines curved instead of straight
+  )
+
+line_chart
+
+```
+
+
+

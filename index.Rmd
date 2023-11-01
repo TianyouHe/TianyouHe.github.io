@@ -1,0 +1,21 @@
+---
+title: "Tianyou He's HW4 website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Introductory
+This is the website for Tianyou He's HW4 and in this website, you can find [resume](About.html), [Github account](http://github.com/TianyouHe/), and you can also send me an email through this [link](mailto:<th3072@cumc.columbia.edu>) 
+
+![](images/hello.png)
+
+# Dashboard
+
+[Dashboard](file:///Users/tianyouhe/Desktop/desktop/Columbia%202023%20Fall/Data%20Science/TianyouHe.github.io/dashboard.html)
+
+## Data Source
+
+[instacart](https://www.instacart.com/datasets/grocery-shopping-2017)

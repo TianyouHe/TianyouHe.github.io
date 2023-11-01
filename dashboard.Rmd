@@ -53,6 +53,9 @@ bar_plot
 
 ```
 
+
+Column {data-width=350}
+-----------------------------------------------------------------------
 ### Scatter Plot with color based on order_hour_of_day
 
 ```{r}

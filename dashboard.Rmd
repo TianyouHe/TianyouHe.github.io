@@ -16,7 +16,7 @@ library(p8105.datasets)
 ```{r}
 data("instacart")
 sample_data <- instacart|>
-  sample_n(10000)
+  sample_n(100000)
 ```
 
 ```{r}

@@ -47,7 +47,8 @@ bar_plot <- plot_ly(
     product_counts,
     x = ~order_count,
     y = ~product_name,
-    type = 'bar'
+    type = 'bar',
+    color = ~product_name
 )
 bar_plot
 

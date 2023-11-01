@@ -56,7 +56,7 @@ bar_plot
 
 Column {data-width=350}
 -----------------------------------------------------------------------
-### order_dow vs. mean_days_since_prior
+### order_dow vs. mean_days_since_prior_order
 
 ```{r}
 

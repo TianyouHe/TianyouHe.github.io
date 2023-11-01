@@ -14,7 +14,7 @@ This is the website for Tianyou He's HW4 and in this website, you can find [resu
 
 # Dashboard
 
-[Dashboard](file:///Users/tianyouhe/Desktop/desktop/Columbia%202023%20Fall/Data%20Science/TianyouHe.github.io/dashboard.html)
+[Dashboard](dashboard.html)
 
 ## Data Source
 

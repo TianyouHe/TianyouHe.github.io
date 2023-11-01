@@ -12,7 +12,7 @@ navbar:
       text: "Github"
       href: http://github.com/TianyouHe/
     - text: "dashboard"
-      href: file:///Users/tianyouhe/Desktop/desktop/Columbia%202023%20Fall/Data%20Science/TianyouHe.github.io/dashboard.html
+      href: dashboard.html
 output:
   html_document:
     theme: cerulean

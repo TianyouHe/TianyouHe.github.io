@@ -27,8 +27,6 @@ product_counts <- instacart |>
   head(10)
 ```
 
-rmarkdown::render("dashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
-
 Column {data-width=350}
 -----------------------------------------------------------------------
 

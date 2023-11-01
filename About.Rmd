@@ -7,4 +7,10 @@ output:
     theme: cerulean
 ---
 
-This is Tianyou He, a Ms biostatistics student in Columbia University mailman school of public health. 
+# Resume
+This is Tianyou He, a Ms biostatistics student in Columbia University mailman school of public health. And I also got Math degree for undergraduate. 
+
+Know how to use R, python, matlab, and SQL.
+
+
+

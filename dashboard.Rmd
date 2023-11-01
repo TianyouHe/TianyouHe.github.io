@@ -74,7 +74,7 @@ line_chart <- sample_data |>
     color = ~time_of_day, 
     type = "scatter", 
     mode = "markers",
-    line = list(shape = "spline")  # Optional: This makes the lines curved instead of straight
+    line = list(shape = "spline")  
   )
 
 line_chart

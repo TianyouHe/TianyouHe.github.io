@@ -30,7 +30,7 @@ product_counts <- instacart |>
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### order dow vs. order time of the day for reordered
+### order dow vs. order time of the day for reordered and non-reordered
 
 ```{r}
 scatter_plot <- plot_ly(data = sample_data, x = ~order_dow, y = ~order_hour_of_day, color = ~as.factor(reordered), type = "box")

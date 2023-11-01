@@ -57,27 +57,24 @@ bar_plot
 ### order_dow vs. mean_days_since_prior_order
 
 ```{r}
-
-line_chart <- sample_data |>
+line_plot <- sample_data |>
   mutate(time_of_day = case_when(
     order_hour_of_day < 12 ~ "Morning",
-    order_hour_of_day < 18 ~ "Afternoon",
-    TRUE ~ "Evening")
-  ) |>
-  group_by(order_dow, time_of_day) |>
-  summarise(mean_days_since_prior = mean(days_since_prior_order, na.rm = TRUE)) |>
+    order_hour_of_day <18 ~ "Afternoon",
+    TRUE ~ "Evening"
+  ))|>
+  group_by(order_dow, time_of_day)|>
+  summarise(mean_days_since_prior = mean(days_since_prior_order), na.rm = TRUE)|>
   plot_ly(
-    x = ~mean_days_since_prior, 
-    y = ~mean_days_since_prior,  
-    color = ~time_of_day, 
-    type = "scatter", 
+    x = ~order_dow,
+    y = ~mean_days_since_prior,
+    color = ~time_of_day,
+    type = "scatter",
     mode = "markers",
-    line = list(shape = "spline")  
+    line = list(shape = "spline")
   )
 
-line_chart
-
+line_plot
 ```
-
 
 

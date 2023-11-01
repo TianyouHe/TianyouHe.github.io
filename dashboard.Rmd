@@ -40,7 +40,7 @@ scatter_plot
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Product with their order count
+### Top 10 product with their order count
 
 ```{r}
 bar_plot <- plot_ly(
